@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Dowry Calculator</title>
+</head>
+<body>
+    <div class="container mt-4 shadow p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col col-sm-12">
+                <h1 class="text-center">Dowry Calculator</h1>
+                <form id="dowryForm">
+                    <label for="name">Bride's Name:</label>
+                    <input type="text" id="name" class="form-control mb-2" required>
+
+                    <label for="startingBid">Starting Bid:</label>
+                    <input type="number" id="startingBid" class="form-control mb-2" required>
+
+                    <label for="education">Education Level:</label>
+                    <select id="education" class="form-control mb-2">
+                        <option value="1">Select Education</option>
+                        <option value="1.5">Undergraduate degree</option>
+                        <option value="1.2">College degree</option>
+                        <option value="1.05">High school degree</option>
+                        <option value="0.9">Middle school degree</option>
+                    </select>
+
+                    <label for="networth">Family Net Worth:</label>
+                    <select id="networth" class="form-control mb-2">
+                        <option value="1">Select Net Worth</option>
+                        <option value="2">More than 10,000$</option>
+                        <option value="1.5">Between 5,000$ and 10,000$</option>
+                        <option value="1.2">Less than 5,000$</option>
+                    </select>
+
+                    <label for="caste">Caste:</label>
+                    <select id="caste" class="form-control mb-2">
+                        <option value="0">Select Caste</option>
+                        <option value="100">Brahmin (+100$)</option>
+                        <option value="50">Kshatriya (+50$)</option>
+                        <option value="20">Vaishya (+20$)</option>
+                        <option value="10">Shudra (+10$)</option>
+                        <option value="-50">Varna - Untouchable (-50$)</option>
+                    </select>
+
+                    <label>Skills:</label><br>
+                    <input type="checkbox" class="skills" value="10"> Playing an instrument (+10$)<br>
+                    <input type="checkbox" class="skills" value="20"> Good cook (+20$)<br>
+                    <input type="checkbox" class="skills" value="15"> Easygoing character (+15$)<br>
+                    <input type="checkbox" class="skills" value="10"> Sings well (+10$)<br>
+
+                    <label>Age:</label><br>
+                    <input type="radio" name="age" class="age" value="1.5"> 18-23 (x1.5)<br>
+                    <input type="radio" name="age" class="age" value="1.2"> 24-27 (x1.2)<br>
+                    <input type="radio" name="age" class="age" value="0.95"> 28+ (x0.95)<br>
+
+                    <label>Reputation:</label><br>
+                    <input type="checkbox" class="reputation" value="0.85"> Gossips about family (x0.85)<br>
+                    <input type="checkbox" class="reputation" value="0.9"> Gossips about character (x0.9)<br>
+                    <input type="checkbox" class="reputation" value="-20"> General gossip (-20$)<br>
+
+                    <label for="loveLetter">Love Letter:</label>
+                    <textarea id="loveLetter" class="form-control mb-2" maxlength="500"></textarea>
+
+                    <button id="submit" type="button" class="btn btn-primary">Calculate Price</button>
+                </form>
+                <div id="result" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
